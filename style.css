@@ -6,6 +6,14 @@
   margin: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+button {
+  font: inherit;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -15,4 +23,143 @@ body {
   min-height: 100svh;
   line-height: 1.5;
   font-family: "Red Hat Display", sans-serif;
+  display: grid;
+  place-content: center;
+  background-color: hsl(225, 100%, 94%);
+}
+
+.main {
+  /* max-width: 33rem; */
+  width: min(90%, 45rem);
+  margin: 0 auto;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: white;
+  padding-block-end: 3rem;
+  box-shadow: 2px 2px 8px 2px #aaaaaa59;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  margin-block-end: clamp(2.4rem, 1.555rem + 2.254vw, 4.8rem);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2.4rem;
+  text-align: center;
+  padding-inline: clamp(2rem, 1.014rem + 2.629vw, 4.8rem);
+}
+
+.wrapper h1 {
+  font-weight: 900;
+  font-size: clamp(2rem, 1.648rem + 0.939vw, 3rem);
+  color: hsl(223, 47%, 23%);
+}
+
+.wrapper p {
+  font-size: clamp(1.4rem, 1.33rem + 0.188vw, 1.6rem);
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+}
+
+.plan {
+  width: 100%;
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+  padding: clamp(1.6rem, 1.318rem + 0.751vw, 2.4rem);
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 1rem;
+}
+
+.plan img {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.plan-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.plan-details strong {
+  font-size: clamp(1.2rem, 1.059rem + 0.376vw, 1.6rem);
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+
+.plan-details small {
+  font-size: clamp(1.2rem, 1.059rem + 0.376vw, 1.6rem);
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+}
+
+.btn {
+  border: none;
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-change {
+  text-align: right;
+  flex-grow: 10;
+  background-color: transparent;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: hsl(245, 75%, 52%);
+  text-decoration: underline;
+}
+
+.btn-change:hover {
+  color: hsla(245, 75%, 52%, 0.782);
+  text-decoration: none;
+}
+
+.btn-proceed {
+  width: 100%;
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+  padding-block: 1.6rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 2px 8px 10px 0px hsla(225, 60%, 65%, 0.526);
+}
+
+.btn-proceed:hover {
+  background-color: hsla(245, 75%, 52%, 0.761);
+}
+
+.btn-cancel {
+  font-size: 1.3rem;
+  color: hsl(224, 23%, 55%);
+  background-color: transparent;
+  font-weight: 800;
+}
+
+.btn-cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media screen and (min-width: 1440px) {
+  .btn-change {
+    font-size: 1.4rem;
+  }
+
+  .btn-proceed {
+    font-size: 1.4rem;
+  }
+
+  .btn-cancel {
+    font-size: 1.4rem;
+  }
 }
